@@ -1,0 +1,32 @@
+// h1{
+//     font-size: 20px
+// }
+.mat-card-header {
+    border-bottom: 1px solid grey;
+}
+.mat-card-title {
+    display: flex;
+    margin-bottom: 16px;
+}
+.image{
+    margin: 0 auto;
+    padding: 10px;}
+img{
+    height: auto;
+    width: 100%;
+}
+.mat-card-content{
+    display: flex
+}
+.mat-card-content>:first-child{
+    margin-top: 0;
+    width: 30%;
+}
+.mat-card-content>:last-child{
+    margin-top: 0;
+    width: 70%;
+}
+h3 {
+    margin: auto;
+    color: grey;
+}

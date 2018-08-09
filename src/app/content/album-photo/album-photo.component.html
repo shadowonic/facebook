@@ -1,0 +1,9 @@
+<div *ngIf='albumPhoto'>
+  <div #photo class='photos' (mouseover)='handleMouseOver($event)' (mouseleave)='handleMouseOut()' (click)='handleMouseOut()'
+    routerLink='/photo/{{albumPhoto.id}}'>
+    <img src="{{albumPhoto.picture}}">
+  </div>
+  <!-- <div *ngIf='showDescription' [ngClass]="{'cube-bottom': !showDescriptionTop, 'cube-top': showDescriptionTop}"></div> -->
+  <app-photo-description *ngIf='showDescription ' [state]='state' #description class="description" [id]='albumPhoto.id' [showDescriptionTop]='showDescriptionTop'>
+  </app-photo-description>
+</div>

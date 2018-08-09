@@ -1,0 +1,16 @@
+<div class='header'>
+  <a mat-raised-button class='header-button' routerLink='' matTooltip="Albums">
+    <mat-icon>photo_album</mat-icon>
+  </a>
+  <a *ngIf='!isLogged' mat-raised-button class='header-button' (click)="login()" matTooltip="Login">
+    <mat-icon>lock_open</mat-icon>
+  </a>
+
+  <a *ngIf='isLogged' mat-raised-button class='header-button' (click)="logout()" matTooltip="Logout">
+    <mat-icon>lock</mat-icon>
+
+  </a>
+  <a mat-raised-button class='header-button' routerLink='upload/photo' matTooltip="Upload photos">
+    <mat-icon>cloud_upload</mat-icon>
+  </a>
+  

@@ -1,0 +1,21 @@
+<mat-card *ngIf='user && photo' class="example-card">
+  <mat-card-header>
+    <a routerLink='/{{photo.album.id}}'>
+      <mat-card-title>
+        <mat-icon>arrow_back_ios</mat-icon>
+        <h3>{{photo.album.name}}</h3>
+      </mat-card-title>
+    </a>
+  </mat-card-header>
+  <div class="image">
+    <img src="{{photoUrl}}">
+  </div>
+  <ng-container *ngIf='photo.comments'>
+    <mat-card-content *ngFor='let comment of photo.comments.data'>
+      <div>
+        <h3>{{comment.from.name}}:</h3>
+      </div>
+      <div> {{comment.message}}</div>
+    </mat-card-content>
+  </ng-container>
+</mat-card>

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+  border-bottom: 1px solid grey;
+  padding: 0 5px;
+}
+
+.mat-raised-button {
+  border: 1px solid grey;
+  border-bottom: none;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 0 0px 0 0px;
+  min-width: 0px;
+  margin: 0 5px;
+  box-shadow: none;
+}
+
+.mat-raised-button:not([class*=mat-elevation-z]){
+  box-shadow: none;
+}
+
+.mat-raised-button:hover {
+  box-shadow: 2px -3px 10px 0px grey;
+}
+
+.mat-raised-button:focus {
+  box-shadow: 0 2px 0 -1px #fff
+}

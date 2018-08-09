@@ -1,0 +1,22 @@
+<div *ngIf='photoDetails'>
+  <div *ngIf='!showDescriptionTop' class="cube-container">
+    <div [@descriptionState]='state' class="cube-bottom"></div>
+  </div>
+ 
+  <div [@descriptionState]='state' [ngClass]="{'container-column-top': showDescriptionTop, 
+  'container-column-bottom': !showDescriptionTop}">
+
+    <div class="container-row">
+      <div class="caption">Name:</div>
+      <div class="descripton-text"> {{photoDetails.photoOwner}}</div>
+    </div>
+    <div class="container-row">
+      <div class="caption">Description:</div>
+      <div class="descripton-text"> {{photoDetails.description}}</div>
+      <div *ngIf='!photoDetails.description' class="descripton-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt explicabo id, aut harum natus illum obcaecati beatae
+        pariatur, possimus corporis vitae molestiae! Eius natus earum dolorum explicabo praesentium eum suscipit.</div>
+    </div>
+    <div *ngIf='showDescriptionTop' class="cube-container">
+      <div [@descriptionState]='state' class="cube-top"></div>
+    </div>
+  </div>

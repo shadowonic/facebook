@@ -1,0 +1,37 @@
+<mat-form-field>
+  <mat-select [(value)]="albumId" placeholder='select album'>
+    <mat-option *ngFor="let album of albums" [(value)]="album.id">
+      {{album.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<ng-container *ngIf='albumId'>
+  <p>You selected: {{albumId}}</p>
+</ng-container>
+
+<div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput"
+  [ngClass]="{ 'is-drop-over': dragOver }">
+  <ng-container *ngIf='files.length === 0'>
+    <h1 for="file" class="inputfile">
+      Drop files here or
+      <label for='file'>browse</label>
+      to upload
+    </h1>
+  </ng-container>
+
+  <div class="upload-preview" *ngFor='let item of files'>
+    <img src="{{item.image}}" (mouseenter)='removeFile(item.id)'>
+    <div style="background: 'red'" class="progress-text">
+      {{item.progressMessage}}
+    </div>
+    <div [ngStyle]="{'width': item.progress.data.percentage + '%' }" class="progress">
+      <!-- {{item.progressMessage}} -->
+    </div>
+
+  </div>
+
+  <label class="hidden">
+    <input type="file" id="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput"
+      multiple>
+  </label>

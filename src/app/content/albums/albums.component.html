@@ -1,0 +1,26 @@
+<div *ngIf='user' class="user">Welcome, {{user.name}}</div>
+
+<div class="container-column">
+  <div class="container-row card" *ngFor="let item of album | async">
+    
+    <div class='container-row'>
+      <a class="container-image image-album image" routerLink='{{item.id}}'>
+        <img class="image" src="{{item.picture.data.url}}" alt="">
+      </a>
+      <div class="container-column content album">
+        <a class="title" routerLink='{{item.id}}'>{{item.name}}</a>
+        <div class="container-row sub-content">
+          <mat-icon class="md-14">file_copy</mat-icon>
+          {{item.count}} files
+        </div>
+        <div class="container-row sub-content">
+          <mat-icon class="md-14">access_time</mat-icon> {{item.updated_time}} hours ago
+        </div>
+      </div>
+    </div>
+    <a class="details-link" routerLink='{{item.id}}'>
+      <mat-icon>arrow_forward_ios</mat-icon>
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </a>
+  </div>
+</div>

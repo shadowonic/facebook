@@ -1,0 +1,85 @@
+.albumSelect {
+  width: 100%;
+  display: block
+}
+
+.inputfile {
+  color: grey;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress {
+  height: 20px;
+  background: #84bd84;
+  position: absolute;
+  bottom: 0px;
+  &-text{
+    @extend .progress;
+    width: 100%;
+    color: #00000094;
+    font-size: 20px;
+    background: none;
+    text-align: center;
+    background: #5d57573b;
+  }
+}
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  margin: 10px;
+}
+
+.drop-container {
+  margin: 10px;
+  min-height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: dashed;
+  border-color: #c8dbdc;
+  background: radial-gradient(#e0dbdb, #efefef, #c8dbdc);
+}
+
+.upload-item {
+  display: flex;
+  align-items: center;
+  padding: 0 30px
+}
+
+.upload-item-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.upload-preview {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  min-width: 100px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.68);
+}
+
+img {
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+label {
+  color: aqua;
+  text-decoration: underline;
+}

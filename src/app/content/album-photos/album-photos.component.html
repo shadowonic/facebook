@@ -1,0 +1,16 @@
+<a class="container row album-header" routerLink=''>
+  <div class='icon-container'>
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <mat-icon>folder</mat-icon>
+    <mat-icon class="md-18 rotate-45 sub-icon">arrow_right</mat-icon>
+  </div>
+
+  <div>
+    {{albumName | async}}</div>
+</a>
+
+<div id='album' class="album-container">
+  <div class="container" *ngFor="let item of albumPhotos | async" routerLink='/photo/{{item.id}}'>
+    <app-album-photo [albumPhoto]='item'></app-album-photo>
+  </div>
+</div>

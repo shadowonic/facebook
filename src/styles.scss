@@ -1,0 +1,74 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* deeppurple-amber.css
+indigo-pink.css
+pink-bluegrey.css
+purple-green.css */
+.hidden{
+  display: none
+}
+body {
+  max-width: 750px;
+  // min-width: 500px;
+  margin: auto;
+  font-family: 'Acme', sans-serif;
+}
+img{
+  height: 100%;
+}
+.container {
+  display: flex;
+  &-row {
+    @extend .container;
+    flex-direction: row;
+  }
+  &-column {
+    @extend .container;
+    flex-direction: column
+  }
+  &-image {
+    @extend .container;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+.image {
+  height: 100%;
+  &-album {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    margin: 5px;
+  }}
+  .mat-icon {
+    color: grey
+  }
+
+  .material-icons.md-14 {
+    font-size: 14px;
+  }
+  .material-icons.md-18 {
+    font-size: 18px;
+  }
+  .material-icons.md-24 {
+    font-size: 24px;
+  }
+  .material-icons.md-36 {
+    font-size: 36px;
+  }
+  .material-icons.md-48 {
+    font-size: 48px;
+  }
+  .material-icons.rotate-45 {
+    transform: rotate(45deg);
+  }
+  .material-icons.sub-icon {
+    position: relative;
+    top: 5px;
+    right: 10px;
+  }
